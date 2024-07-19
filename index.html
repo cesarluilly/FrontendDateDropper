@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DateDropper</title>
+    <link rel="stylesheet" href="./Datedropper/datedropper.css">
+
+    <style>
+        body {
+            height: 100vh;
+            background-size: cover;
+        }
+
+        input {
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DateDropper</h1>
+
+    <!-- data-default-date="03/19/2020" -->
+    <input type="text" id="myDatepickerStart" data-lang="es" data-large-mode="true" data-large-default="true" data-max-year="2025" data-min-year="2017" >
+
+
+
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./Datedropper/datedropper.js"></script>
+    <!-- <script src="./Datedropper/datedropper.min.js"></script> -->
+    <script>
+    
+    $(document).ready(function(){
+        $('#myDatepickerStart').dateDropper(
+            {
+                format: 'dd/mm/y'
+            }
+        );
+        
+        $('#myDatepickerStart').val("10/09/2024");
+        
+        });
+    </script>
+
+</body>
+</html>
